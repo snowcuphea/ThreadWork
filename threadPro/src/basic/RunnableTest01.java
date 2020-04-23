@@ -1,0 +1,62 @@
+package basic;
+/*
+ * 1.Runnable인터페이스를 구현하는 클래스를 생성
+ * 2.Runnable인터페이스가 갖고있는 추상메소드인 run메소드를 오버라이딩
+ * 	 => 동시 작업하고 싶은 내용을 정의
+ * 3.작성한 Runnable객체를 이용해서 Thread객체를 생성
+ * 	 => Thread객체를 생성하면서 매개변수로 Runnable객체를 전달
+ * 4.생성한 Thread객체의 start호출
+ */
+
+class RunnanbleDemo1 implements Runnable {
+	
+	public void run() {
+		// 1부터 20까지 출력하는 코드를 다른 실행흐름이랑 동시에 출력하는게 목적
+
+		for (int i = 1; i <= 20; i++) {
+			System.out.print(i+"("+Thread.currentThread().getName()+")  ");
+			//currentThread() : 현재 실행중인 쓰레드를 가져온다.
+			try {
+				Thread.sleep(500);// 실행흐름을 멈춘다.
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			if (i % 5 == 0) {
+				System.out.println();
+			}
+		}
+
+	}
+}
+//ThreadDemo01객체를 활용하여 멀티쓰레드 프로그래밍 구현
+public class RunnableTest01  {
+
+	public static void main(String[] args) {
+		System.out.println("***********프로그램 시작**********");
+		RunnanbleDemo1 r1 = new RunnanbleDemo1();
+		RunnanbleDemo1 r2 = new RunnanbleDemo1();
+
+		// Runnable메소드는 기본적으로 run()메소드만 갖고있기때문에, start()메소드를 그냥 사용할 수 없다.
+		// 따라서 Runnable객체를 매개변수로 Thread객체를 생성한다.
+		//어쨌든간에 Thread를 상속하던, Runnable인터페이스를 구현하든 Thread 객체는 있어야 한다.
+		//그래야 start() 쓸 수 있으니까
+		Thread T1 = new Thread(r1);
+		Thread T2 = new Thread(r2);
+		
+		T1.start();
+		T2.start();
+		
+		System.out.println("작업중....");
+		for(int i=1;i<=10;i++) {
+			System.out.println("main");
+			try {
+				Thread.sleep(200);// 실행흐름을 멈춘다.
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("*********프로그램종료***********");
+
+	}
+
+}

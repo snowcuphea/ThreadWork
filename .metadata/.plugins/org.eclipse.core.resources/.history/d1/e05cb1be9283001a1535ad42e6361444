@@ -1,0 +1,17 @@
+package sync;
+
+public class Movetr extends Thread {
+	
+	SharedObj obj;
+	
+	public Movetr(SharedObj obj) {
+		super();
+		this.obj = obj;
+	}
+	
+	
+	public void run() {
+		obj.open(false);
+	}
+
+}

@@ -1,0 +1,12 @@
+package sync;
+
+public class ThreadSyncTest01 {
+
+	public static void main(String[] args) {
+		//모든 쓰레드가 공유해서 사용할 객체 
+		Toilet toilet = new Toilet();
+		
+
+	}
+
+}

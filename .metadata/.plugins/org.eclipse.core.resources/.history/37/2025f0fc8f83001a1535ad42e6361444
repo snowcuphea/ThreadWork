@@ -1,0 +1,12 @@
+package sync;
+
+public class Movetr extends Thread {
+	String name;
+	SharedObj obj;
+	
+	public void run() {
+		obj.open(name);
+		
+	}
+
+}

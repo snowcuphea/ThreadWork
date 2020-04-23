@@ -1,0 +1,21 @@
+package basic;
+
+/*
+ * 멀티쓰레드 프로그래밍
+ * 1. Thread클래스를 상속받는다.
+ * 
+ * 
+ */
+class ThreadDemo1 extends Thread{
+	
+
+	
+}
+public class ThreadTest01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

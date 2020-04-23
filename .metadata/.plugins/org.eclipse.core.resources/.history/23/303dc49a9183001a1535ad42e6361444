@@ -1,0 +1,28 @@
+package sync;
+
+public class SharedObj {
+	Account acc1; //Çöºó°èÁÂ
+	Account acc2; //±è¼­¿¬°èÁÂ
+	
+	public synchronized void open(Boolean state) {
+		
+		if(state==true) {
+			for(int i=1; i<=3 ; i++) {
+				System.out.println("acc1ÀÜ¾×:"+acc1.getBalance()+":::: acc2ÀÜ¾×:"+acc2.getBalance());
+			}
+			
+		}
+		
+		if(state==false) {
+			for(int k = 1;  k <= 20 ; k++) {
+				acc1.withdraw(2000);
+				acc2.deposit(2000);
+				System.out.println(k+"¹øÂ° 2000¿ø ¼Û±İ");
+			}
+		}
+		
+		
+	}
+	
+
+}

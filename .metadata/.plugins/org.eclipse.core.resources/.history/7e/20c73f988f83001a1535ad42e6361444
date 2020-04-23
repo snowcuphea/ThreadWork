@@ -1,0 +1,13 @@
+package sync;
+
+public class Movetr {
+	
+	public void move(int money) {
+		
+		for(int i=1 ; i<20;i++) {
+				System.out.println("ют╠щ");
+		}
+		
+	}
+
+}

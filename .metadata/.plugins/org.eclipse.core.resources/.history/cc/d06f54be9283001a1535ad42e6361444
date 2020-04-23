@@ -1,0 +1,16 @@
+package sync;
+
+public class Howmany extends Thread {
+	SharedObj obj;
+
+	public Howmany(SharedObj obj) {
+		super();
+		this.obj = obj;
+	}
+	
+	
+	public void run() {
+		obj.open(true);
+	}
+
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="basic.ThreadDemo1"/>
+<fullyQualifiedTypeName name="basic.AlphaThread"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSplitPaneUI"/>
+<fullyQualifiedTypeName name="basic.StopThread01"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+<fullyQualifiedTypeName name="sync.SharedObj"/>
+<fullyQualifiedTypeName name="sync.Movetr"/>
+<fullyQualifiedTypeName name="sync.Howmany"/>
+</qualifiedTypeNameHistroy>

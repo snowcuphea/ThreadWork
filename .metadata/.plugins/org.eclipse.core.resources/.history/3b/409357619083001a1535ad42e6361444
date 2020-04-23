@@ -1,0 +1,18 @@
+package sync;
+
+public class Movetr extends Thread {
+	String name;
+	SharedObj obj;
+	
+	public Movetr(String name, Toilet obj) {
+		super();
+		this.name = name;
+		this.SharedObj = obj;
+	}
+	
+	
+	public void run() {
+		obj.open(false);
+	}
+
+}
